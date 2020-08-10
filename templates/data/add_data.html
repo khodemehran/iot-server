@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>add data to iot server</title>
+    <meta name="description" content="adding data to server">
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+    <!--css here-->
+</head>
+<body>
+<h3 style="text-align: center; color:aqua;background-color: black;height:60px;margin-top: 50px;font-size: 50px;">Adding Data On This Page</h3>
+
+
+<br>
+<br>
+<hr>
+<form method="POST" action="{% url 'add_data' %}">
+    {% csrf_token %}
+    Humidity:<br><br>
+    <input type="number" name="humidity"/>
+    <br><br>
+    Temp:<br><br>
+    <input type="number" name="temp"/>
+    <br><br>
+    Tozih:<br><br>
+    <input type="text" name="tozih"/>
+    <br><br>
+    <input type="submit" value="send data"><br>
+    
+
+</form>
+</body>
+
+</html>

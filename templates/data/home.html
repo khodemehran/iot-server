@@ -1,0 +1,21 @@
+<div style="max-width: 100%; height:30%;background-color: burlywood;"><h2 style="text-align: center; font-size: 60px;font-family: monospace;">iot-server-data</h2></div>
+<hr>
+
+<div style="max-width:100% ; background-color: lightgray;height: 300px; text-align: center;"><h1 style="padding-top: 25px;">{{ Humidity_Avg }} avrage humidity on {{ last_pk }} information that where given.</h1>
+<h1 style="padding: 25px;">{{ Temp_Avg }} avrage Temp on {{ last_pk }} information that where given.</h1>
+</div>>
+{% for data in all_data.all %}
+
+<p><h4>{{ data.pk }}</h4>   data humidity:{{ data.humidity }}<p>
+</br>
+
+<p>data temp:{{ data.temp }}<p>
+</br>
+
+<p>data date:{{ data.date }}<p>
+
+</br>
+<hr>
+
+
+{% endfor %}
